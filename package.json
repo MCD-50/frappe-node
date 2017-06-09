@@ -1,0 +1,29 @@
+{
+  "name": "frappe-node",
+  "version": "1.0.0",
+  "description": "Frappe rest api wrappper",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "frappe",
+    "frappe",
+    "api",
+    "frappe",
+    "rest"
+  ],
+  "author": "frappe",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "requestify": "^0.2.5"
+  }
+}
