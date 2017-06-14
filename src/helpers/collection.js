@@ -6,13 +6,12 @@ export const get_args = (data = null, sid = null) => {
 
 	//append body if exists
 	if (data) {
-		args["data"] = data;
-		args["headers"] = { 'Accept': 'application/json', 'Content-Type': 'multipart/form-data' };
+		args["body"] = data;
 	}
 
 	//append if sid exists 
 	if (sid) {
-		args["cookies"] = { 'sid': sid.split(';')[0].split('=')[1]};
+		args["cookies"] = { 'sid': sid.split(';')[0].split('=')[1] };
 	}
 
 	return args;
@@ -29,7 +28,7 @@ export const get_domain = (site_name) => {
 export const get_data = (doctype, data) => {
 	return {
 		"doctype": doctype,
-		"data": data ? data : null
+		"info": data ? data : null
 	};
 }
 

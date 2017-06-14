@@ -41,7 +41,6 @@ export class FrappeNode {
 	process_request(doctype, data, url) {
 		return new Promise((resolve, reject) => {
 			data = get_data(doctype, data);
-			console.log(url);
 			resolve_request(_domain, url, data, _sid)
 				.then((json) => resolve(json))
 				.catch((rej) => reject(rej));

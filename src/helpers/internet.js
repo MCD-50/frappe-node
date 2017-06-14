@@ -34,6 +34,7 @@ const fetch_url = (domain, url, data, sid) => {
 		check_if_domain_exists(domain)
 			.then(() => {
 				let args = get_args(data, sid);
+				console.log(args);
 				agent
 				.request(url, args)
 				.then((res) => {
