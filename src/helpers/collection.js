@@ -10,17 +10,17 @@ export const get_args = (data = null, sid = null) => {
 		args["headers"] = { 'Accept': 'application/json', 'Content-Type': 'multipart/form-data' };
 	}
 
-	//appen if sid exists 
+	//append if sid exists 
 	if (sid) {
-		args["cookies"] = { 'sid': sid };
+		args["cookies"] = { 'sid': sid.split(';')[0].split('=')[1]};
 	}
 
 	return args;
 }
 
-export const get_domain = (site) => {
-	if (domain) {
-		domain = `http://${site}.erpnext.com`;
+export const get_domain = (site_name) => {
+	if (site_name) {
+		const domain = `http://${site_name}`;
 		return domain.trim();
 	}
 	return null;
@@ -32,6 +32,7 @@ export const get_data = (doctype, data) => {
 		"data": data ? data : null
 	};
 }
+
 
 export const console_message = (msg) => {
 	console.log(msg);

@@ -1,6 +1,6 @@
 import { get_args, console_message } from './collection';
-const dns = require('dns');
 import agent from './agent';
+const dns = require('dns');
 
 
 export const resolve_request = (domain, url, data, sid) => {
@@ -8,7 +8,6 @@ export const resolve_request = (domain, url, data, sid) => {
 		if (data) {
 			data = JSON.stringify(data);
 		}
-
 		fetch_url(domain, url, data, sid)
 			.then((json) => resolve(json))
 			.catch((rej) => {
@@ -17,12 +16,10 @@ export const resolve_request = (domain, url, data, sid) => {
 	})
 }
 
-
 //local methods
-
 const check_if_domain_exists = (domain) => {
 	return new Promise((resolve, reject) => {
-		dns.resolve(`http://${domain}.com`, (e) => {
+		dns.resolve('www.google.com', (e) => {
 			if (e)
 				reject(e);
 			else
@@ -39,9 +36,14 @@ const fetch_url = (domain, url, data, sid) => {
 				let args = get_args(data, sid);
 				agent
 				.request(url, args)
-				.then((res)=> {
+				.then((res) => {
+					console.log(res);
 					resolve(res);
 				});
-			}).catch((rej) => reject(rej));
+			}).catch((rej) => {
+				console.log(rej);
+				reject(rej)
+			});
 	})
 }
+
