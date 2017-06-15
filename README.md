@@ -1,5 +1,5 @@
 # frappe-node
-A npm package for frappe framework
+A npm package frappe framework
 
 
 # Getting Started
