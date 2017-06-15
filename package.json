@@ -2,12 +2,10 @@
   "name": "frappe-node",
   "version": "1.0.6",
   "description": "A npm package frappe framework",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "build": "babel source --presets babel-preset-es2015 --out-dir dist",
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist",
+		"prepublish": "npm run build"
   },
   "keywords": [
     "frappe",
