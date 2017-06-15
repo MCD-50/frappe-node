@@ -1,41 +1,39 @@
 {
-  "name": "frappe-node",
-  "version": "1.0.5",
-  "description": "A npm package frappe framework",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "lint": "eslint . --ext .js,.jsx",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "frappe",
-    "frappe",
-    "api",
-    "frappe",
-    "rest"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mcd-50/frappe-node.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mcd-50/frappe-node/issues"
-  },
-  "homepage": "https://github.com/mcd-50/frappe-node",
-  "author": "Ayush Shukla",
-  "license": "MIT",
-  "devDependencies": {
-    "nodemon": "^1.11.0",
-    "eslint": "~3.12.2",
-    "eslint-config-airbnb": "~13.0.0",
-    "eslint-config-cooperka": "~0.2.3",
-    "eslint-plugin-import": "~2.2.0",
-    "eslint-plugin-jsx-a11y": "~2.2.3",
-    "eslint-plugin-react": "~6.8.0"
-  },
-  "dependencies": {
-    "requestify": "^0.2.5"
-  }
+	"name": "frappe-node",
+	"version": "1.0.5",
+	"description": "A npm package frappe framework",
+	"main": "index.js",
+	"scripts": {
+		"build": "babel source --presets babel-preset-es2015 --out-dir dist",
+		"dev": "nodemon index.js",
+		"start": "node index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"frappe",
+		"frappe",
+		"api",
+		"frappe",
+		"rest"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mcd-50/frappe-node.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mcd-50/frappe-node/issues"
+	},
+	"homepage": "https://github.com/mcd-50/frappe-node",
+	"author": "Ayush Shukla",
+	"license": "MIT",
+	"devDependencies": {
+		"nodemon": "^1.11.0",
+		"babel-polyfill": "^6.23.0",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-core": "^6.24.1",
+		"babel-cli": "^6.24.1"
+	},
+	"dependencies": {
+		"requestify": "^0.2.5"
+	}
 }
