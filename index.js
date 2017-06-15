@@ -1,3 +1,5 @@
-require('babel-core/register');
-require('babel-polyfill');
-require('./main');
+import { FrappeNode } from './src/api';
+
+export {
+	FrappeNode
+}
