@@ -10,7 +10,7 @@ $ npm i frappe-node --save
 # Usage
 ```js
 	import {FrappeNode} from 'frappe-node';
-
+	
 	const frappe_node = new FrappeNode();
 	frappe_node.authenticate('mysite.erpnext.com', 'email', 'password')
 	
@@ -22,11 +22,11 @@ $ npm i frappe-node --save
 
 # Methods
 ```js
-	- add_doc
-	- update_doc
-	- delete_doc
-	- get_doc
-	- get_list
-	- get_meta
+- add_doc
+- update_doc
+- delete_doc
+- get_doc
+- get_list
+- get_meta
 ```
 
