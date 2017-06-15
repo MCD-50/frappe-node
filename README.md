@@ -9,13 +9,13 @@ $ npm i frappe-node --save
 
 # Usage
 ```js
-	import {FrappeNode} from 'frappe-node';
-	
-	const frappe_node = new FrappeNode();
-	frappe_node.authenticate('mysite.erpnext.com', 'email', 'password')
-	
-	//lets create a new ToDo
-	frappe_node.add_doc('ToDo', {description:'des1'})
+import {FrappeNode} from 'frappe-node';
+
+const frappe_node = new FrappeNode();
+frappe_node.authenticate('mysite.erpnext.com', 'email', 'password')
+
+//lets create a new ToDo
+frappe_node.add_doc('ToDo', {description:'des1'})
 	.then(res => console.log(res))
 	.catch(rej => console.log(rej));
 ```
