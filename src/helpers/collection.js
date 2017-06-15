@@ -28,7 +28,7 @@ export const get_domain = (site_name) => {
 export const get_data = (doctype, data) => {
 	return {
 		"doctype": doctype,
-		"info": data ? data : null
+		"info": data ? data : {}
 	};
 }
 

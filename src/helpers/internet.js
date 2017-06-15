@@ -3,7 +3,7 @@ import agent from './agent';
 const dns = require('dns');
 
 
-export const resolve_request = (domain, url, data, sid) => {
+export const resolve_request = (domain, url, data=null, sid=null) => {
 	return new Promise((resolve, reject) => {
 		if (data) {
 			data = JSON.stringify(data);
@@ -33,16 +33,11 @@ const fetch_url = (domain, url, data, sid) => {
 		//first check if connection exists
 		check_if_domain_exists(domain)
 			.then(() => {
-				let args = get_args(data, sid);
-				console.log(args);
-				agent
-				.request(url, args)
+				agent.request(url, get_args(data, sid))
 				.then((res) => {
-					console.log(res);
 					resolve(res);
 				});
 			}).catch((rej) => {
-				console.log(rej);
 				reject(rej)
 			});
 	})
