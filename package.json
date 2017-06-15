@@ -1,7 +1,7 @@
 {
   "name": "frappe-node",
   "version": "1.0.0",
-  "description": "Frappe rest api wrappper",
+  "description": "A npm package frappe framework",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
@@ -15,7 +15,15 @@
     "frappe",
     "rest"
   ],
-  "author": "frappe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcd-50/frappe-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mcd-50/frappe-node/issues"
+  },
+  "homepage": "https://github.com/mcd-50/frappe-node",
+  "author": "Ayush Shukla",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.11.0"
