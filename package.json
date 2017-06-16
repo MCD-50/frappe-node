@@ -1,6 +1,6 @@
 {
   "name": "frappe-node",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A npm package frappe framework",
   "main": "./dist/api.js",
   "scripts": {
