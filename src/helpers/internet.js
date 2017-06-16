@@ -1,3 +1,4 @@
+'use strict'
 import { get_args, console_message } from './collection';
 import agent from './agent';
 const dns = require('dns');

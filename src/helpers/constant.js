@@ -1,3 +1,5 @@
+'use strict'
+
 //base url
 export const REL = "/api/method/frappe.utils.frappe_node.";
 

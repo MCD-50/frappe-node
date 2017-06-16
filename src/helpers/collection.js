@@ -1,3 +1,4 @@
+'use strict'
 export const get_args = (data = null, sid = null) => {
 	let args = {
 		method: "POST",

@@ -1,3 +1,4 @@
+'use strict'
 import { console_message, get_domain, get_data } from './helpers/collection';
 import {
 	ADD_DOC, DELETE_DOC, UPDATE_DOC,
